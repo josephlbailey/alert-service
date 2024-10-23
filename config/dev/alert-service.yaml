@@ -1,0 +1,14 @@
+# DEV
+port: 9025
+db:
+  port: 5440
+  host: localhost
+  password: alert_service_user
+  migration_password: alert_service_owner
+  ssl_mode: disable
+
+users:
+  - username: adminServiceUser
+    password: adminServicePassword
+  - username: integrationUser
+    password: integrationUserPassword

@@ -1,0 +1,4 @@
+db:
+  database: alert_service
+  username: alert_service_user
+  migration_username: alert_service_owner

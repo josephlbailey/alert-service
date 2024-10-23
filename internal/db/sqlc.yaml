@@ -1,0 +1,21 @@
+version: "2"
+sql:
+  - engine: "postgresql"
+    queries: "query"
+    schema: "migration"
+    gen:
+      go:
+        package: "domain"
+        out: "domain"
+        sql_package: "pgx/v5"
+        emit_interface: true
+        emit_result_struct_pointers: true
+        overrides:
+          - db_type: "uuid"
+            go_type:
+              import: "github.com/gofrs/uuid/v5"
+              type: "UUID"
+          - db_type: "timestamptz"
+            go_type:
+              import: "time"
+              type: "Time"
