@@ -12,7 +12,7 @@ import (
 	common "github.com/josephlbailey/alert-service/internal/pkg/config"
 )
 
-func newTestServer(t *testing.T, store db.Store) *Server {
+func newTestServer(_ *testing.T, store db.Store) *Server {
 	config := common.LoadConfig[conf.Config]("alert-service", "dev")
 	logger := zap.NewNop()
 	server := NewServer(config, logger, store)
